@@ -453,10 +453,10 @@ extension Zephyr {
                     return
             }
 
-            if let localStoredDate = zephyrLocalStoreDictionary[ZephyrSyncKey] as? Date,
-                !(remoteStoredDate.timeIntervalSince1970 > localStoredDate.timeIntervalSince1970) {
-                return
-            }
+            //if let localStoredDate = zephyrLocalStoreDictionary[ZephyrSyncKey] as? Date,
+            //    !(remoteStoredDate.timeIntervalSince1970 > localStoredDate.timeIntervalSince1970) {
+            //    return
+            //}
 
             for key in monitoredKeys where cloudKeys.contains(key) {
                 syncSpecificKeys(keys: [key], dataStore: .remote)
